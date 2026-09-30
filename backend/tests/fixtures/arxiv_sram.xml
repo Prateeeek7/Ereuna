@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom">
+  <link href="http://arxiv.org/api/query?search_query=all:SRAM%20FinFET" rel="self" type="application/atom+xml"/>
+  <title type="html">ArXiv Query: search_query=all:SRAM FinFET</title>
+  <id>http://arxiv.org/api/12345</id>
+  <updated>2024-05-10T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">2</opensearch:totalResults>
+  <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
+  <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">2</opensearch:itemsPerPage>
+  <entry>
+    <id>http://arxiv.org/abs/2004.00001v1</id>
+    <updated>2020-04-01T12:00:00Z</updated>
+    <published>2020-04-01T12:00:00Z</published>
+    <title>A 0.4V 7nm Independent-Gate FinFET SRAM with Dynamic Reverse Body Biasing</title>
+    <summary>We present an independent-gate 7nm FinFET SRAM macro operating reliably down to 0.4V with 48% reduction in standby leakage current via dynamic reverse body biasing.</summary>
+    <author>
+      <name>Elena Rostova</name>
+    </author>
+    <author>
+      <name>Marcus Vance</name>
+    </author>
+    <arxiv:doi>10.1109/JSSC.2020.2987112</arxiv:doi>
+    <link title="pdf" href="https://arxiv.org/pdf/2004.00001.pdf" rel="related" type="application/pdf"/>
+    <arxiv:journal_ref>IEEE JSSC 2020</arxiv:journal_ref>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2301.00004v1</id>
+    <updated>2023-01-05T08:00:00Z</updated>
+    <published>2023-01-05T08:00:00Z</published>
+    <title>Cryogenic Characterization of FinFET SRAM Operation at 4.2 Kelvin for Quantum Interface Circuits</title>
+    <summary>Measurements of subthreshold slope steepening and leakage suppression in 16nm FinFET SRAM at liquid helium temperature.</summary>
+    <author>
+      <name>Liam O'Connor</name>
+    </author>
+    <arxiv:doi>10.1063/5.0089120</arxiv:doi>
+    <link title="pdf" href="https://arxiv.org/pdf/2301.00004.pdf" rel="related" type="application/pdf"/>
+    <arxiv:journal_ref>Appl. Phys. Lett. 2023</arxiv:journal_ref>
+  </entry>
+</feed>

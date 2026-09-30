@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /opt/grobid/grobid-home/schemas/xsd/Grobid.xsd">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="a" type="main">A 6T FinFET SRAM with Sub-10pW Standby Leakage</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher/>
+                <availability status="unknown"><licence/></availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <analytic>
+                        <author><persName><forename type="first">J.</forename><surname>Kim</surname></persName></author>
+                        <author><persName><forename type="first">S.</forename><surname>Park</surname></persName></author>
+                    </analytic>
+                    <monogr>
+                        <title level="j">IEEE Transactions on Electron Devices</title>
+                        <imprint><date type="published" when="2023"/></imprint>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <abstract>
+                <p>This paper presents a novel 6T FinFET SRAM cell design that achieves sub-10pW standby leakage power per cell at 0.6V supply voltage. The proposed design utilizes independent-gate biasing to reduce subthreshold leakage while maintaining read stability. Measurement results from a 7nm test chip demonstrate 8.3 pW/cell standby leakage at 25°C, representing a 45% reduction compared to conventional designs.</p>
+            </abstract>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <head n="1">Introduction</head>
+                <p>Static random-access memory (SRAM) constitutes a significant portion of modern system-on-chip (SoC) designs. As technology scales to sub-10nm nodes, leakage power in SRAM arrays has become a critical design concern. FinFET technology offers improved electrostatic control compared to planar MOSFET devices, enabling lower leakage currents.</p>
+                <p>In this work, we propose a 6T SRAM cell using independent-gate FinFET transistors that significantly reduces standby leakage power while maintaining acceptable noise margins and read/write performance.</p>
+            </div>
+            <div>
+                <head n="2">Proposed Design</head>
+                <p>The proposed SRAM cell employs a dual-threshold voltage scheme using independent-gate biasing on the pull-down NMOS transistors. By applying a negative back-gate voltage of -0.2V during standby mode, the subthreshold leakage is exponentially reduced. The cell uses minimum-sized transistors at the 7nm technology node with fin pitch of 24nm.</p>
+                <p>The key innovation is the use of asymmetric fin heights between the pull-up PMOS and pull-down NMOS devices, which provides an additional knob for optimizing the static noise margin (SNM) versus leakage trade-off. HSPICE simulations using BSIM-CMG models confirm the design feasibility.</p>
+            </div>
+            <div>
+                <head n="3">Results</head>
+                <p>Silicon measurements from a 256Kb test array fabricated in a 7nm FinFET process demonstrate the following results. The standby leakage power is 8.3 pW/cell at Vdd=0.6V and 25°C, which represents a 45% reduction compared to the baseline 6T design. The static noise margin is 185 mV at nominal conditions, exceeding the minimum requirement of 150 mV. The read access time is 0.42 ns at Vdd=0.8V.</p>
+                <p>The write margin was measured at 320 mV, confirming reliable write operation. Monte Carlo analysis with 10000 samples shows the cell maintains functionality with 6-sigma yield at the nominal operating point.</p>
+            </div>
+            <div>
+                <head n="4">Conclusion</head>
+                <p>We have demonstrated a 6T FinFET SRAM cell achieving 8.3 pW/cell standby leakage at 0.6V, a 45% improvement over conventional designs. The independent-gate biasing technique proves effective for leakage reduction without significant area overhead. Future work will investigate the temperature sensitivity and process variation effects across a wider operating range.</p>
+            </div>
+        </body>
+        <back>
+            <div type="references">
+                <listBibl>
+                    <biblStruct><monogr><title>Previous SRAM leakage work</title><imprint><date>2020</date></imprint></monogr></biblStruct>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

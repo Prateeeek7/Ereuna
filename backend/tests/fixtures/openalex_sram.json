@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "count": 2,
+    "db_response_time_ms": 12,
+    "page": 1,
+    "per_page": 2
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W2987112001",
+      "doi": "https://doi.org/10.1109/JSSC.2020.2987112",
+      "title": "A 0.4V 7nm Independent-Gate FinFET SRAM With Dynamic Reverse Body Biasing",
+      "display_name": "A 0.4V 7nm Independent-Gate FinFET SRAM With Dynamic Reverse Body Biasing",
+      "publication_year": 2020,
+      "publication_date": "2020-04-15",
+      "cited_by_count": 48,
+      "abstract_inverted_index": {
+        "We": [0],
+        "present": [1],
+        "an": [2],
+        "independent-gate": [3],
+        "7nm": [4],
+        "FinFET": [5],
+        "SRAM": [6],
+        "macro": [7],
+        "operating": [8],
+        "reliably": [9],
+        "down": [10],
+        "to": [11],
+        "0.4V": [12],
+        "with": [13],
+        "standby": [14],
+        "leakage": [15],
+        "reduction": [16]
+      },
+      "primary_location": {
+        "source": {
+          "id": "https://openalex.org/S1001",
+          "display_name": "IEEE Journal of Solid-State Circuits",
+          "type": "journal"
+        },
+        "pdf_url": "https://arxiv.org/pdf/2004.00001.pdf"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://arxiv.org/pdf/2004.00001.pdf"
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A1",
+            "display_name": "Elena Rostova"
+          }
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A2",
+            "display_name": "Marcus Vance"
+          }
+        }
+      ]
+    },
+    {
+      "id": "https://openalex.org/W3098811002",
+      "doi": "https://doi.org/10.1109/TCSI.2021.3098811",
+      "title": "Variability-Resilient 10T Subthreshold FinFET SRAM With Differential Read Buffer",
+      "display_name": "Variability-Resilient 10T Subthreshold FinFET SRAM With Differential Read Buffer",
+      "publication_year": 2021,
+      "publication_date": "2021-06-10",
+      "cited_by_count": 32,
+      "abstract_inverted_index": {
+        "A": [0],
+        "10T": [1],
+        "bitcell": [2],
+        "isolating": [3],
+        "the": [4],
+        "read": [5],
+        "path": [6],
+        "enables": [7],
+        "read-disturb-free": [8],
+        "operation": [9]
+      },
+      "primary_location": {
+        "source": {
+          "id": "https://openalex.org/S1002",
+          "display_name": "IEEE Transactions on Circuits and Systems I: Regular Papers",
+          "type": "journal"
+        },
+        "pdf_url": null
+      },
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A3",
+            "display_name": "Kenji Sato"
+          }
+        }
+      ]
+    }
+  ]
+}

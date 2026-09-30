@@ -1,0 +1,63 @@
+{
+  "overall_pass_rate": 97.3,
+  "total_items": 294,
+  "verified_items": 286,
+  "dropped_items": 8,
+  "topics": [
+    {
+      "topic": "Low-leakage SRAM using FinFET",
+      "papers_selected": 10,
+      "full_text_count": 3,
+      "abstract_count": 7,
+      "total_items": 70,
+      "verified_items": 69,
+      "dropped_items": 1,
+      "pass_rate": 98.6,
+      "elapsed_seconds": 34.3
+    },
+    {
+      "topic": "Transformer models for protein structure prediction",
+      "papers_selected": 10,
+      "full_text_count": 4,
+      "abstract_count": 6,
+      "total_items": 73,
+      "verified_items": 70,
+      "dropped_items": 3,
+      "pass_rate": 95.9,
+      "elapsed_seconds": 38.2
+    },
+    {
+      "topic": "Perovskite solar cell stability",
+      "papers_selected": 10,
+      "full_text_count": 2,
+      "abstract_count": 8,
+      "total_items": 45,
+      "verified_items": 42,
+      "dropped_items": 3,
+      "pass_rate": 93.3,
+      "elapsed_seconds": 77.5
+    },
+    {
+      "topic": "Federated learning in healthcare privacy",
+      "papers_selected": 10,
+      "full_text_count": 2,
+      "abstract_count": 8,
+      "total_items": 55,
+      "verified_items": 54,
+      "dropped_items": 1,
+      "pass_rate": 98.2,
+      "elapsed_seconds": 156.7
+    },
+    {
+      "topic": "Graph neural networks for traffic forecasting",
+      "papers_selected": 10,
+      "full_text_count": 2,
+      "abstract_count": 8,
+      "total_items": 51,
+      "verified_items": 51,
+      "dropped_items": 0,
+      "pass_rate": 100.0,
+      "elapsed_seconds": 164.5
+    }
+  ]
+}

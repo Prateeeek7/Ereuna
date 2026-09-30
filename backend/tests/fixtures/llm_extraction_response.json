@@ -1,0 +1,129 @@
+{
+  "problem": {
+    "text": "Leakage power in SRAM arrays has become a critical design concern as technology scales to sub-10nm nodes",
+    "evidence": {
+      "quote": "As technology scales to sub-10nm nodes, leakage power in SRAM arrays has become a critical design concern.",
+      "section": "Introduction"
+    }
+  },
+  "method": {
+    "text": "A 6T SRAM cell using independent-gate FinFET transistors with dual-threshold voltage scheme and asymmetric fin heights",
+    "evidence": {
+      "quote": "we propose a 6T SRAM cell using independent-gate FinFET transistors that significantly reduces standby leakage power while maintaining acceptable noise margins",
+      "section": "Introduction"
+    }
+  },
+  "technology": {
+    "node_nm": 7,
+    "device": "FinFET",
+    "cell_type": "6T",
+    "evidence": {
+      "quote": "The cell uses minimum-sized transistors at the 7nm technology node with fin pitch of 24nm.",
+      "section": "Proposed Design"
+    }
+  },
+  "tools": [
+    {
+      "name": "HSPICE",
+      "category": "simulator",
+      "evidence": {
+        "quote": "HSPICE simulations using BSIM-CMG models confirm the design feasibility.",
+        "section": "Proposed Design"
+      }
+    }
+  ],
+  "datasets": [],
+  "metrics": [
+    {
+      "name": "standby leakage power",
+      "value": 8.3,
+      "unit": "pW/cell",
+      "conditions": {
+        "vdd": 0.6,
+        "temp_c": 25.0,
+        "corner": null
+      },
+      "evidence": {
+        "quote": "The standby leakage power is 8.3 pW/cell at Vdd=0.6V and 25°C",
+        "section": "Results"
+      }
+    },
+    {
+      "name": "static noise margin",
+      "value": 185.0,
+      "unit": "mV",
+      "conditions": {
+        "vdd": null,
+        "temp_c": null,
+        "corner": null
+      },
+      "evidence": {
+        "quote": "The static noise margin is 185 mV at nominal conditions, exceeding the minimum requirement of 150 mV.",
+        "section": "Results"
+      }
+    },
+    {
+      "name": "read access time",
+      "value": 0.42,
+      "unit": "ns",
+      "conditions": {
+        "vdd": 0.8,
+        "temp_c": null,
+        "corner": null
+      },
+      "evidence": {
+        "quote": "The read access time is 0.42 ns at Vdd=0.8V.",
+        "section": "Results"
+      }
+    },
+    {
+      "name": "write margin",
+      "value": 320.0,
+      "unit": "mV",
+      "conditions": {
+        "vdd": null,
+        "temp_c": null,
+        "corner": null
+      },
+      "evidence": {
+        "quote": "The write margin was measured at 320 mV, confirming reliable write operation.",
+        "section": "Results"
+      }
+    }
+  ],
+  "findings": [
+    {
+      "text": "The proposed 6T FinFET SRAM achieves 8.3 pW/cell standby leakage at 0.6V, a 45% reduction over conventional designs",
+      "theme": "Leakage reduction",
+      "evidence": {
+        "quote": "The standby leakage power is 8.3 pW/cell at Vdd=0.6V and 25°C, which represents a 45% reduction compared to the baseline 6T design.",
+        "section": "Results"
+      }
+    },
+    {
+      "text": "Independent-gate biasing with -0.2V back-gate voltage exponentially reduces subthreshold leakage",
+      "theme": "Leakage reduction",
+      "evidence": {
+        "quote": "By applying a negative back-gate voltage of -0.2V during standby mode, the subthreshold leakage is exponentially reduced.",
+        "section": "Proposed Design"
+      }
+    },
+    {
+      "text": "Static noise margin of 185 mV exceeds the 150 mV minimum requirement, confirming read stability",
+      "theme": "Stability",
+      "evidence": {
+        "quote": "The static noise margin is 185 mV at nominal conditions, exceeding the minimum requirement of 150 mV.",
+        "section": "Results"
+      }
+    }
+  ],
+  "limitations": [
+    {
+      "text": "Temperature sensitivity and process variation effects across wider operating range not investigated",
+      "evidence": {
+        "quote": "Future work will investigate the temperature sensitivity and process variation effects across a wider operating range.",
+        "section": "Conclusion"
+      }
+    }
+  ]
+}

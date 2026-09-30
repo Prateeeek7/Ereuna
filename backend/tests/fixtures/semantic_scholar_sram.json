@@ -1,0 +1,42 @@
+{
+  "total": 2,
+  "offset": 0,
+  "data": [
+    {
+      "paperId": "649def34f828a2a025049a4f4d2217c046e7f123",
+      "externalIds": {
+        "DOI": "10.1109/JSSC.2020.2987112",
+        "CorpusId": 218552100
+      },
+      "title": "A 0.4V 7nm Independent-Gate FinFET SRAM with Dynamic Reverse Body Biasing",
+      "abstract": "We present an independent-gate 7nm FinFET SRAM macro operating reliably down to 0.4V with 48% reduction in standby leakage current via dynamic reverse body biasing.",
+      "venue": "IEEE J. Solid-State Circuits",
+      "year": 2020,
+      "citationCount": 51,
+      "openAccessPdf": {
+        "url": "https://arxiv.org/pdf/2004.00001.pdf",
+        "status": "HYBRID"
+      },
+      "authors": [
+        {"authorId": "144123", "name": "Elena Rostova"},
+        {"authorId": "144124", "name": "Marcus Vance"}
+      ]
+    },
+    {
+      "paperId": "a1b2c3d4e5f60718293a4b5c6d7e8f9012345678",
+      "externalIds": {
+        "DOI": "10.1145/3386569.3392410",
+        "CorpusId": 220011223
+      },
+      "title": "Analytical Static Noise Margin Modeling for Near-Threshold FinFET SRAM Cells",
+      "abstract": "We formulate closed-form analytical models for hold and read static noise margins under non-Gaussian FinFET process variation.",
+      "venue": "ACM/IEEE ISLPED",
+      "year": 2019,
+      "citationCount": 27,
+      "openAccessPdf": null,
+      "authors": [
+        {"authorId": "155987", "name": "David Thorne"}
+      ]
+    }
+  ]
+}

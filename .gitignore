@@ -1,0 +1,38 @@
+# Secrets and local config
+.env
+.env.*
+!.env.example
+local.properties
+*.jks
+*.keystore
+
+# Local databases
+backend/data/*.db
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Node / web
+node_modules/
+dist/
+
+# Android / Gradle
+.gradle/
+build/
+.kotlin/
+.idea/
+*.iml
+*.apk
+*.aab
+captures/
+
+# Editors and OS
+.DS_Store
+.vscode/
+.claude/

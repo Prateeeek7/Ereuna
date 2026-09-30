@@ -1,0 +1,375 @@
+{
+  "id": "map_sram_finfet_001",
+  "topic": "Low-leakage SRAM using FinFET",
+  "normalized_topic": "low leakage sram using finfet",
+  "filters": {
+    "year_min": 2018,
+    "year_max": 2024,
+    "fields": ["Computer Science", "Engineering"],
+    "min_citations": 5,
+    "open_access_only": false,
+    "max_papers": 8
+  },
+  "created_at": "2024-05-10T14:32:00Z",
+  "updated_at": "2024-05-10T14:33:15Z",
+  "stats": {
+    "total_papers": 8,
+    "full_text_papers": 6,
+    "abstract_only_papers": 2,
+    "year_range": [2018, 2024],
+    "gaps_count": 3,
+    "contradictions_count": 1
+  },
+  "synthesis": {
+    "text": "Recent research in FinFET-based low-leakage SRAM designs primarily exploits independent-gate biasing and Schmitt-trigger topologies to mitigate subthreshold conduction in sub-14nm regimes. Independent back-gate control yields up to 48% standby leakage reduction [1], though at the cost of cell area inflation and complex layout routing [2]. Near-threshold operation exhibits severe static noise margin degradation [3], motivating hybrid 8T and 10T read-decoupled architectures [4]. However, cryogenic performance characteristics below 77K remain scarcely quantified across scaled FinFET geometries [5].",
+    "citation_ids": ["p1", "p2", "p3", "p4", "p5"]
+  },
+  "papers": [
+    {
+      "id": "p1",
+      "doi": "10.1109/JSSC.2020.2987112",
+      "title": "A 0.4V 7nm Independent-Gate FinFET SRAM With Dynamic Reverse Body Biasing",
+      "authors": [
+        {"name": "Elena Rostova", "affiliation": "IMEC"},
+        {"name": "Marcus Vance", "affiliation": "KU Leuven"}
+      ],
+      "year": 2020,
+      "venue": "IEEE J. Solid-State Circuits",
+      "citation_count": 48,
+      "abstract": "We present an independent-gate 7nm FinFET SRAM macro operating reliably down to 0.4V with 48% reduction in standby leakage current via dynamic reverse body biasing.",
+      "oa_pdf_url": "https://arxiv.org/pdf/2004.00001.pdf",
+      "has_full_text": true,
+      "relevance_score": 0.96,
+      "relevance_reason": "Direct experimental demonstration of independent-gate biasing for standby leakage reduction at 7nm node.",
+      "short_label": "Rostova 2020",
+      "extraction": {
+        "paper_id": "p1",
+        "problem": {
+          "text": "Severe subthreshold and gate-induced drain leakage (GIDL) in 7nm standard 6T SRAM cells during low-activity standby states.",
+          "evidence": {
+            "id": "ev_p1_1",
+            "paper_id": "p1",
+            "quote": "Standby leakage power in sub-10nm FinFET SRAM is overwhelmingly dominated by subthreshold current when Vdd is maintained above 0.5V.",
+            "section": "Introduction",
+            "page": 1
+          }
+        },
+        "method": {
+          "text": "Independent back-gate bias control combined with write-assist wordline boosting.",
+          "evidence": {
+            "id": "ev_p1_2",
+            "paper_id": "p1",
+            "quote": "By decoupling the front and back gates of pull-up PMOS devices, reverse back-gate biasing reduces subthreshold leakage by up to 48%.",
+            "section": "Circuit Architecture",
+            "page": 3
+          }
+        },
+        "technology": {
+          "node_nm": 7,
+          "device": "FinFET",
+          "cell_type": "6T",
+          "evidence": {
+            "id": "ev_p1_3",
+            "paper_id": "p1",
+            "quote": "Fabricated in a commercial 7nm bulk FinFET process with standard 6T layout topology.",
+            "section": "Experimental Setup",
+            "page": 4
+          }
+        },
+        "tools": [
+          {
+            "name": "Synopsys HSPICE",
+            "category": "Circuit Simulator",
+            "evidence": {
+              "id": "ev_p1_4",
+              "paper_id": "p1",
+              "quote": "Simulations were conducted using Synopsys HSPICE with calibrated BSIM-CMG models.",
+              "section": "Methodology",
+              "page": 2
+            }
+          }
+        ],
+        "datasets": [],
+        "metrics": [
+          {
+            "name": "Standby Leakage",
+            "value": 1.42,
+            "unit": "nW/cell",
+            "normalized_value": 1.42e-9,
+            "normalized_unit": "W/cell",
+            "conditions": {"vdd": 0.4, "temp_c": 25.0, "corner": "TT"},
+            "evidence": {
+              "id": "ev_p1_m1",
+              "paper_id": "p1",
+              "quote": "Measured standby leakage at room temperature was 1.42 nW per bitcell at 0.4V Vdd.",
+              "section": "Results",
+              "page": 5
+            },
+            "confidence": "HIGH"
+          }
+        ],
+        "findings": [
+          {
+            "id": "find_p1_1",
+            "text": "Independent back-gate bias decreases subthreshold standby current by 48% at 0.4V.",
+            "theme": "Leakage Reduction",
+            "paper_ids": ["p1"],
+            "evidence": {
+              "id": "ev_p1_f1",
+              "paper_id": "p1",
+              "quote": "Reverse back-gate biasing reduces subthreshold leakage by up to 48% across typical process corners.",
+              "section": "Results",
+              "page": 5
+            },
+            "confidence": "HIGH"
+          }
+        ],
+        "limitations": [
+          {
+            "text": "Requires split-contact routing leading to a 14% bitcell area penalty.",
+            "evidence": {
+              "id": "ev_p1_lim1",
+              "paper_id": "p1",
+              "quote": "The independent-gate contact separation introduces an area overhead of approximately 14% compared to tied-gate cells.",
+              "section": "Discussion",
+              "page": 6
+            },
+            "confidence": "HIGH"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p2",
+      "doi": "10.1109/TCSI.2021.3098811",
+      "title": "Variability-Resilient 10T Subthreshold FinFET SRAM With Differential Read Buffer",
+      "authors": [
+        {"name": "Kenji Sato", "affiliation": "Tokyo Institute of Technology"},
+        {"name": "Hiroshi Tanaka", "affiliation": "Tokyo Institute of Technology"}
+      ],
+      "year": 2021,
+      "venue": "IEEE Trans. Circuits Syst. I",
+      "citation_count": 32,
+      "abstract": "A 10T bitcell architecture isolating the read path enables read-disturb-free operation down to 0.3V in 14nm FinFET technology.",
+      "oa_pdf_url": "https://arxiv.org/pdf/2105.00002.pdf",
+      "has_full_text": true,
+      "relevance_score": 0.91,
+      "relevance_reason": "Addresses stability and read-disturb issues inherent in low-voltage subthreshold FinFET SRAM.",
+      "short_label": "Sato 2021"
+    },
+    {
+      "id": "p3",
+      "doi": "10.1145/3386569.3392410",
+      "title": "Analytical Static Noise Margin Modeling for Near-Threshold FinFET SRAM Cells",
+      "authors": [
+        {"name": "David Thorne", "affiliation": "University of Michigan"}
+      ],
+      "year": 2019,
+      "venue": "ACM/IEEE ISLPED",
+      "citation_count": 27,
+      "abstract": "We formulate closed-form analytical models for hold and read static noise margins under non-Gaussian FinFET process variation.",
+      "oa_pdf_url": null,
+      "has_full_text": false,
+      "relevance_score": 0.88,
+      "relevance_reason": "Provides mathematical formulation of noise margins under FinFET variability.",
+      "short_label": "Thorne 2019"
+    },
+    {
+      "id": "p4",
+      "doi": "10.1109/TVLSI.2022.3164019",
+      "title": "Comparative Analysis of 8T and 10T FinFET SRAM Bitcells for Ultra-Low-Power Edge Processors",
+      "authors": [
+        {"name": "Amira Benali", "affiliation": "CEA-Leti"},
+        {"name": "Jean Dupont", "affiliation": "CEA-Leti"}
+      ],
+      "year": 2022,
+      "venue": "IEEE Trans. Very Large Scale Integr. (VLSI) Syst.",
+      "citation_count": 19,
+      "abstract": "Comprehensive silicon measurement comparison of 8T and 10T decoupled topologies at 10nm node.",
+      "oa_pdf_url": "https://arxiv.org/pdf/2203.00003.pdf",
+      "has_full_text": true,
+      "relevance_score": 0.85,
+      "relevance_reason": "Direct side-by-side metric comparison of 8T vs 10T cells.",
+      "short_label": "Benali 2022"
+    },
+    {
+      "id": "p5",
+      "doi": "10.1063/5.0089120",
+      "title": "Cryogenic Characterization of FinFET SRAM Operation at 4.2 Kelvin for Quantum Interface Circuits",
+      "authors": [
+        {"name": "Liam O'Connor", "affiliation": "University of Sydney"}
+      ],
+      "year": 2023,
+      "venue": "Appl. Phys. Lett.",
+      "citation_count": 14,
+      "abstract": "Measurements of subthreshold slope steepening and leakage suppression in 16nm FinFET SRAM at liquid helium temperature.",
+      "oa_pdf_url": "https://arxiv.org/pdf/2301.00004.pdf",
+      "has_full_text": true,
+      "relevance_score": 0.82,
+      "relevance_reason": "Extends low-leakage evaluation to cryogenic temperatures.",
+      "short_label": "O'Connor 2023"
+    },
+    {
+      "id": "p6",
+      "doi": "10.1109/IEDM19574.2021.9720612",
+      "title": "Negative Capacitance FinFET SRAM Cell with Steep Subthreshold Swing for Near-Zero Standby Power",
+      "authors": [
+        {"name": "Rajesh Gupta", "affiliation": "IIT Madras"}
+      ],
+      "year": 2021,
+      "venue": "IEEE International Electron Devices Meeting (IEDM)",
+      "citation_count": 41,
+      "abstract": "Integration of ferroelectric HfZrO2 gate stack onto 5nm FinFET enables sub-60 mV/dec subthreshold slope.",
+      "oa_pdf_url": null,
+      "has_full_text": false,
+      "relevance_score": 0.80,
+      "relevance_reason": "Alternative steep-slope transistor concept applied to SRAM.",
+      "short_label": "Gupta 2021"
+    },
+    {
+      "id": "p7",
+      "doi": "10.1109/ACCESS.2023.3289012",
+      "title": "Machine-Learning-Guided Sizing of FinFET SRAM Cells Under Die-to-Die and Within-Die Variations",
+      "authors": [
+        {"name": "Sarah Chen", "affiliation": "Stanford University"}
+      ],
+      "year": 2023,
+      "venue": "IEEE Access",
+      "citation_count": 11,
+      "abstract": "Bayesian optimization framework for rapid sizing of multi-fin SRAM bitcells targeting Pareto-optimal leakage-delay tradeoffs.",
+      "oa_pdf_url": "https://arxiv.org/pdf/2305.00005.pdf",
+      "has_full_text": true,
+      "relevance_score": 0.77,
+      "relevance_reason": "Optimization toolchain for low-leakage cell design.",
+      "short_label": "Chen 2023"
+    },
+    {
+      "id": "p8",
+      "doi": "10.1016/j.mejo.2024.106120",
+      "title": "Dual-Vth Asymmetric Gate FinFET 7T SRAM for Leakage-Critical Biomedical Implants",
+      "authors": [
+        {"name": "Klaus Lindner", "affiliation": "TU Dresden"}
+      ],
+      "year": 2024,
+      "venue": "Microelectronics Journal",
+      "citation_count": 6,
+      "abstract": "Asymmetric gate workfunction engineering achieves sub-picoampere leakage per cell in 12nm FinFET technology.",
+      "oa_pdf_url": "https://arxiv.org/pdf/2402.00006.pdf",
+      "has_full_text": true,
+      "relevance_score": 0.74,
+      "relevance_reason": "Specific application study on biomedical implant memory cells.",
+      "short_label": "Lindner 2024"
+    }
+  ],
+  "findings": [
+    {
+      "id": "f1",
+      "text": "Independent back-gate bias control suppresses standby leakage current by 40-48% in sub-10nm FinFET bitcells.",
+      "theme": "Biasing Techniques",
+      "paper_ids": ["p1", "p8"],
+      "evidence": {
+        "id": "ev_f1",
+        "paper_id": "p1",
+        "quote": "Reverse back-gate biasing reduces subthreshold leakage by up to 48% across typical process corners.",
+        "section": "Results",
+        "page": 5
+      },
+      "confidence": "HIGH"
+    },
+    {
+      "id": "f2",
+      "text": "Decoupled read buffers in 8T and 10T cells eliminate read-disturb but incur 25% to 40% area overhead compared to conventional 6T.",
+      "theme": "Cell Topologies",
+      "paper_ids": ["p2", "p4"],
+      "evidence": {
+        "id": "ev_f2",
+        "paper_id": "p2",
+        "quote": "The isolated read bitline ensures zero read-disturb down to 0.3V while the cell footprint increases by 34%.",
+        "section": "Cell Layout",
+        "page": 4
+      },
+      "confidence": "HIGH"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "statement": "No systematic benchmarking exists comparing standby leakage of FinFET vs Gate-All-Around (GAA) nanosheet SRAM at identical supply voltages.",
+      "pattern": "untested_combination",
+      "supporting_paper_ids": ["p1", "p6"],
+      "why_it_matters": "Nanosheet architecture replaces FinFET at 3nm; memory designers lack empirical crossover points for sub-0.5V standby.",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "g2",
+      "statement": "Cryogenic leakage characterization below 77K is absent for independent-gate architectures.",
+      "pattern": "untested_range",
+      "supporting_paper_ids": ["p1", "p5"],
+      "why_it_matters": "Quantum controller processors require on-chip SRAM operating between 1K and 4K where freeze-out alters back-gate control.",
+      "confidence": "MED"
+    },
+    {
+      "id": "g3",
+      "statement": "Radiation-induced soft error rate under extreme reverse back-gate biasing has not been measured.",
+      "pattern": "untested_condition",
+      "supporting_paper_ids": ["p1"],
+      "why_it_matters": "Critical charge (Qcrit) diminishes when back-gate voltage increases internal channel resistance.",
+      "confidence": "MED"
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "c1",
+      "metric": "Minimum Operating Voltage (Vmin)",
+      "entries": [
+        {
+          "paper_id": "p1",
+          "value": 0.40,
+          "unit": "V",
+          "conditions": {"topology": "6T with back-gate bias", "node": "7nm"}
+        },
+        {
+          "paper_id": "p2",
+          "value": 0.30,
+          "unit": "V",
+          "conditions": {"topology": "10T decoupled", "node": "14nm"}
+        }
+      ],
+      "likely_reason": "The 10T topology decouples read and write stability, allowing Vmin to scale 100mV lower than 6T at the expense of 34% area overhead.",
+      "confidence": "HIGH"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "exp_1",
+      "gap_id": "g1",
+      "hypothesis": "GAA nanosheet 6T SRAM cells will demonstrate lower standby leakage than FinFET below 0.35V due to superior four-sided electrostatic gate control.",
+      "setup": "TCAD Sentaurus simulation sweeping gate length (12-18nm) across FinFET and 3-sheet GAA models at 25C and 85C.",
+      "tools": ["Synopsys Sentaurus TCAD", "BSIM-CMG"],
+      "variables": ["Gate topology (FinFET vs GAA)", "Vdd (0.2V - 0.6V)", "Temperature (-40C to 85C)"],
+      "expected_result": "GAA achieves 35% lower subthreshold leakage below 0.35V due to steeper subthreshold slope.",
+      "difficulty": "MED",
+      "paper_ids": ["p1", "p6"]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Synopsys HSPICE",
+      "category": "Circuit Simulator",
+      "count": 5,
+      "paper_ids": ["p1", "p2", "p3", "p4", "p7"]
+    },
+    {
+      "name": "BSIM-CMG Model",
+      "category": "Compact Model",
+      "count": 4,
+      "paper_ids": ["p1", "p3", "p6", "p7"]
+    },
+    {
+      "name": "Cadence Virtuoso",
+      "category": "EDA Tool",
+      "count": 3,
+      "paper_ids": ["p2", "p4", "p8"]
+    }
+  ]
+}
